@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #333333;
+    margin:0;
+    padding:0;
+    font-family: 'Inconsolata';
+}
+
+.headline {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    animation: example2 2s;
+    animation-iteration-count: 5;
+    animation-delay: 1s;
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+    color:white;
+    margin-top:30px;
+    margin-bottom:0;
+    
+}
+
+.headline i {
+    font-size: 2rem;
+    color: white;
+    margin-top:0;
+}
+
+
+
+@keyframes example2 {
+
+    0% {
+        transform: translateY(0);
+        color: white;
+    }
+    50% {
+        transform: translateY(-10px);
+        color: color;
+    }
+    100% {
+        transform: translateY(0);
+        color: white;
+    }
+
+}
+
+
+
+
+
+.container {
+    position:relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.card {
+    width: 300px;
+    top:50%;
+    transform: translateY(30%);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+        filter: blur(20px);
+      
+    }
+    100% {
+        opacity: 0.7;
+        filter: blur(0);
+
+    }
+}
+.card .card-pic{
+    height: 100px;
+    background-size: cover;
+    transform: translateY(75px);
+    z-index:1;
+    transition: all 1s;
+    background: #333333;  
+}
+
+.card-pic i {
+    align-self: center;
+    font-size: 6rem;
+    width:auto;
+    color: white;
+    opacity:0.7;
+}
+
+
+.card .card-content{
+    height: 150px;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    transform: translateY(-75px);
+    transition: all 1s;
+    opacity:0;
+    color: white;
+    text-align:center;
+}
+
+.card:hover .card-pic{
+    transform: translateY(0px);
+
+    
+}
+.card:hover .card-pic i{
+    opacity: 1;
+ 
+}
+.card:hover .card-content{
+    transform: translateY(0px);
+    animation: example 1s;
+    opacity:1;
+  
+}
+
+@keyframes example {
+    0% {
+        opacity: 0;
+        filter: blur(10px)
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+
